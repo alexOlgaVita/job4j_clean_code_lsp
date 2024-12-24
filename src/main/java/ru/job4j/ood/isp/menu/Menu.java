@@ -13,7 +13,10 @@ public interface Menu extends Iterable<Menu.MenuItemInfo> {
 
     Optional<MenuItemInfo> select(String itemName);
 
-    //    class MenuItemInfo implements MenuItem {
+    /*   убрала эту имплементацию - по-моему, "не в тему": иначе конфликт из методов с одинаковой сигнутрой параметров
+    (один - из интерфейса, который должен быть перегружен, а другой - из самого класса)
+     class MenuItemInfo implements MenuItem {
+     */
     class MenuItemInfo {
 
         private final String name;

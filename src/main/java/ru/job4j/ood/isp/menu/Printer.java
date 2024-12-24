@@ -26,7 +26,7 @@ public class Printer implements MenuPrinter {
                 filledIndent = filledIndent.concat(FILL_SYMBOL.repeat(menuItemInfo.getNumber().length() - 1));
                 filledPrev = FILL_SYMBOL.repeat(menuItemInfo.getNumber().length() + 1);
             }
-            System.out.printf("%s%s %s \r\n", filledIndent, menuItemInfo.getNumber(), menuItemInfo.getName());
+            System.out.printf("%s%s %s %s", filledIndent, menuItemInfo.getNumber(), menuItemInfo.getName(), System.lineSeparator());
             separatorCountPrev = separatorCount;
             filledIndent.concat(filledPrev);
         }
